@@ -71,6 +71,9 @@
     <Content Include="Default.aspx" />
     <Content Include="Imagens\imgbtnlimpar.png" />
     <Content Include="Imagens\imgbtnselecionar.png" />
+    <Content Include="Imagens\Italico.png" />
+    <Content Include="Imagens\Negrito.png" />
+    <Content Include="Imagens\Sublinhado.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

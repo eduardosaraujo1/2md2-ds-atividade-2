@@ -49,7 +49,15 @@
             }
 
             .image-button {
-                width: 100px;
+                min-width: 100px;
+            }
+
+            .image-display {
+                min-height: 3rem;
+            }
+
+            .font-large {
+                font-size: 1.5rem;
             }
         </style>
     </head>
@@ -79,8 +87,10 @@
                     <br />
                     <asp:RadioButton ID="radioReset" runat="server" GroupName="tamanho" Text="Limpar Formatação" AutoPostBack="True" OnCheckedChanged="radioReset_CheckedChanged" />
                 </div>
-                <asp:Label ID="lblVisor" runat="server" CssClass="span-100"></asp:Label>
-                <asp:Image ID="imgFormat" runat="server" />
+                <asp:Label ID="lblVisor" runat="server" CssClass="span-100 font-large"></asp:Label>
+                <div class="span-100 text-center">
+                    <asp:Image ID="imgFormat" runat="server" CssClass="image-display" />
+                </div>
             </div>
         </form>
     </body>
