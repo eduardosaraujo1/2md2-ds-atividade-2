@@ -61,17 +61,18 @@ namespace AtividadeDoisCopiaAtividade
             radioItalico.Checked = false;
             radioSublinhado.Checked = false;
             radioReset.Checked = true;
+            this.radioReset_CheckedChanged(sender, e);
         }
 
         protected void btnLimpar_Click(object sender, ImageClickEventArgs e)
         {
             lblVisor.Text = "";
             text.Text = "";
-            this.radioReset_CheckedChanged(sender, e);
             radioNegrito.Checked = false;
             radioItalico.Checked = false;
             radioSublinhado.Checked = false;
             radioReset.Checked = true;
+            this.radioReset_CheckedChanged(sender, e);
         }
     }
 }
