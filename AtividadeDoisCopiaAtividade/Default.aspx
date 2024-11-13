@@ -17,6 +17,7 @@
             .container > * {
                 border: 1px dotted gray;
                 padding: 0.5rem 0.25rem;
+                text-align: left;
             }
 
             .span-100 {
@@ -30,10 +31,6 @@
 
             .text-right {
                 text-align: right;
-            }
-
-            .text-left {
-                text-align: left;
             }
 
             .vertical-center {
@@ -69,7 +66,7 @@
                 </div>
                 <asp:Label ID="lblErro" runat="server" CssClass="span-100"></asp:Label>
                 <span class="text-right vertical-center">Digite um texto: </span>
-                <div class="input text-left vertical-center">
+                <div class="input vertical-center">
                     <asp:TextBox ID="text" runat="server"></asp:TextBox>
                 </div>
                 <div class="list">
@@ -77,12 +74,12 @@
                     <asp:ImageButton ID="btnLimpar" runat="server" ImageUrl="~/Imagens/imgbtnlimpar.png" CssClass="image-button" OnClick="btnLimpar_Click" />
                 </div>
                 <div class="text-right vertical-center">Formatação da fonte:</div>
-                <div class="text-left">
+                <div>
                     <asp:RadioButton ID="radioNegrito" runat="server" GroupName="tamanho" Text="Negrito" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" />
                     <br />
                     <asp:RadioButton ID="radioSublinhado" runat="server" GroupName="tamanho" Text="Sublinhado" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" />
                 </div>
-                <div class="text-left">
+                <div>
                     <asp:RadioButton ID="radioItalico" runat="server" GroupName="tamanho" Text="Itálico" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" />
                     <br />
                     <asp:RadioButton ID="radioReset" runat="server" GroupName="tamanho" Text="Limpar Formatação" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" Checked="True" />
