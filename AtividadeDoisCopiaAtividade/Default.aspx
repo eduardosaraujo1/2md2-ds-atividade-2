@@ -78,14 +78,14 @@
                 </div>
                 <div class="text-right vertical-center">Formatação da fonte:</div>
                 <div class="text-left">
-                    <asp:RadioButton ID="radioNegrito" runat="server" GroupName="tamanho" Text="Negrito" AutoPostBack="True" OnCheckedChanged="radioNegrito_CheckedChanged" />
+                    <asp:RadioButton ID="radioNegrito" runat="server" GroupName="tamanho" Text="Negrito" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" />
                     <br />
-                    <asp:RadioButton ID="radioSublinhado" runat="server" GroupName="tamanho" Text="Sublinhado" AutoPostBack="True" OnCheckedChanged="radioSublinhado_CheckedChanged" />
+                    <asp:RadioButton ID="radioSublinhado" runat="server" GroupName="tamanho" Text="Sublinhado" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" />
                 </div>
                 <div class="text-left">
-                    <asp:RadioButton ID="radioItalico" runat="server" GroupName="tamanho" Text="Itálico" AutoPostBack="True" OnCheckedChanged="radioItalico_CheckedChanged" />
+                    <asp:RadioButton ID="radioItalico" runat="server" GroupName="tamanho" Text="Itálico" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" />
                     <br />
-                    <asp:RadioButton ID="radioReset" runat="server" GroupName="tamanho" Text="Limpar Formatação" AutoPostBack="True" OnCheckedChanged="radioReset_CheckedChanged" />
+                    <asp:RadioButton ID="radioReset" runat="server" GroupName="tamanho" Text="Limpar Formatação" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" Checked="True" />
                 </div>
                 <asp:Label ID="lblVisor" runat="server" CssClass="span-100 font-large"></asp:Label>
                 <div class="span-100 text-center">

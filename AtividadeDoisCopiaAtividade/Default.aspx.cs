@@ -14,65 +14,59 @@ namespace AtividadeDoisCopiaAtividade
 
         }
 
-        protected bool isDisplaying()
+        protected void refreshFontAndImage(object sender, EventArgs e)
         {
-            return lblVisor.Text != "";
-        }
-
-        protected void radioNegrito_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!isDisplaying()) return;
-            lblVisor.Font.Bold = true;
-            lblVisor.Font.Underline = false;
-            lblVisor.Font.Italic = false;
-            imgFormat.ImageUrl = "~/Imagens/Negrito.png";
-        }
-
-        protected void radioSublinhado_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!isDisplaying()) return;
-            lblVisor.Font.Bold = false;
-            lblVisor.Font.Underline = true;
-            lblVisor.Font.Italic = false;
-            imgFormat.ImageUrl = "~/Imagens/Sublinhado.png";
-        }
-
-        protected void radioItalico_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!isDisplaying()) return;
-            lblVisor.Font.Bold = false;
-            lblVisor.Font.Underline = false;
-            lblVisor.Font.Italic = true;
-            imgFormat.ImageUrl = "~/Imagens/Italico.png";
-        }
-
-        protected void radioReset_CheckedChanged(object sender, EventArgs e)
-        {
+            // reset
             lblVisor.Font.Bold = false;
             lblVisor.Font.Underline = false;
             lblVisor.Font.Italic = false;
             imgFormat.ImageUrl = "";
+
+            // if text is empty, leave
+            if (lblVisor.Text == "")
+            {
+                return;
+            }
+            
+            // else
+            if (radioItalico.Checked)
+            {
+                lblVisor.Font.Italic = true;
+                imgFormat.ImageUrl = "~/Imagens/Italico.png";
+            }
+            else if (radioNegrito.Checked)
+            {
+                lblVisor.Font.Bold = true;
+                imgFormat.ImageUrl = "~/Imagens/Negrito.png";
+            }
+            else if (radioSublinhado.Checked)
+            {
+                lblVisor.Font.Underline = true;
+                imgFormat.ImageUrl = "~/Imagens/Sublinhado.png";
+            }
         }
 
         protected void btnSelecionar_Click(object sender, ImageClickEventArgs e)
         {
+            // Set visor to text
             lblVisor.Text = text.Text;
-            radioNegrito.Checked = false;
-            radioItalico.Checked = false;
-            radioSublinhado.Checked = false;
-            radioReset.Checked = true;
-            this.radioReset_CheckedChanged(sender, e);
+            refreshFontAndImage(sender, e);
         }
 
         protected void btnLimpar_Click(object sender, ImageClickEventArgs e)
         {
+            // clear lbl text
             lblVisor.Text = "";
             text.Text = "";
+
+            // define radio selection
             radioNegrito.Checked = false;
             radioItalico.Checked = false;
             radioSublinhado.Checked = false;
             radioReset.Checked = true;
-            this.radioReset_CheckedChanged(sender, e);
+
+            // reset
+            refreshFontAndImage(sender, e);
         }
     }
 }
