@@ -84,7 +84,7 @@
                     <br />
                     <asp:RadioButton ID="radioReset" runat="server" GroupName="tamanho" Text="Limpar Formatação" AutoPostBack="True" OnCheckedChanged="refreshFontAndImage" Checked="True" />
                 </div>
-                <asp:Label ID="lblVisor" runat="server" CssClass="span-100 font-large"></asp:Label>
+                <asp:Label ID="lblVisor" runat="server" CssClass="span-100 font-large text-center"></asp:Label>
                 <div class="span-100 text-center">
                     <asp:Image ID="imgFormat" runat="server" CssClass="image-display" />
                 </div>
